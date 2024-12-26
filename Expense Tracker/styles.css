@@ -1,0 +1,205 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+    color: #212529;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    transition: background 0.6s ease;
+}
+
+/* Container */
+.container {
+    background: linear-gradient(145deg, #ffffff, #f1f1f1);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.8);
+    max-width: 450px;
+    width: 100%;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: fadeInScale 1.2s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1), -10px -10px 30px rgba(255, 255, 255, 0.9);
+}
+
+/* Headings */
+h1 {
+    font-size: 2.8em;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #495057;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    animation: fadeInDown 1s ease-out;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    color: #6c757d;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, select, button {
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    font-size: 1.1em;
+    outline: none;
+    transition: all 0.4s ease;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.05), inset -3px -3px 5px rgba(255, 255, 255, 0.7);
+}
+
+input, select {
+    background: linear-gradient(145deg, #f0f0f0, #ffffff);
+    color: #212529;
+}
+
+input:focus, select:focus {
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(145deg, #4a90e2, #357ab9);
+    color: #ffffff;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(74, 144, 226, 0.5);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 3px 10px rgba(74, 144, 226, 0.2);
+}
+
+/* Expense List */
+#expense-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+#expense-list li {
+    background: linear-gradient(145deg, #ffffff, #e8e8e8);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #212529;
+    font-size: 1.1em;
+    transition: transform 0.3s ease, background 0.3s ease;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05), -5px -5px 10px rgba(255, 255, 255, 0.7);
+}
+
+#expense-list li:hover {
+    background: linear-gradient(145deg, #f8f8f8, #ffffff);
+    transform: scale(1.03);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.05), -8px -8px 20px rgba(255, 255, 255, 0.9);
+}
+
+/* Delete Button */
+#expense-list li button {
+    background: transparent;
+    border: none;
+    color: #d9534f;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#expense-list li button:hover {
+    transform: rotate(15deg);
+    color: #c9302c;
+}
+
+/* Summary Section */
+#summary {
+    margin-top: 30px;
+    animation: zoomIn 1.5s ease;
+}
+
+canvas {
+    margin-top: 20px;
+    animation: zoomIn 1.5s ease;
+}
+
+#total {
+    margin-top: 15px;
+    font-size: 1.8em;
+    color: #495057;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
